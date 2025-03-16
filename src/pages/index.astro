@@ -1,0 +1,183 @@
+---
+import '../styles/global.css';
+// Component Imports
+import Button from '../components/Button.astro';
+import { ClientRouter } from 'astro:transitions';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
+---
+
+<html lang="en" data-theme="dark" class="scroll-smooth bg-gradient-to-bl from-violet-800/30 from-30% via-black to-70% to-cyan-900/30 to-90%" >
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro + TailwindCSS</title>
+		<ClientRouter />
+	</head>
+
+	<body class="">
+		<div class="navbar bg-black shadow-md sticky top-0 z-99 rounded-b-md">
+			<div class="navbar-start">
+				<button class="btn btn-ghost btn-circle" popovertarget="popover-menu" style="anchor-name:--anchor-menu">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+				</button>
+				<ul class="dropdown menu w-52 rounded-box bg-base-300 shadow-sm"
+					popover id="popover-menu" style="position-anchor:--anchor-menu">
+					<li class="rounded-box"><a>Item 1</a></li>
+					<li class="rounded-box"><a>Item 2</a></li>
+				</ul>
+			</div>
+			<div class="navbar-center">
+				<a class="text-xl antialiased font-medium tracking-wide font-mono">0x4B1D</a>
+			</div>
+				<div class="navbar-end">
+			</div>
+		</div>
+
+		<div class="hero min-h-screen bg-fixed rounded-b-xl -translate-y-10" style="background-image: url(/public/background.webp);">
+			<div class="hero-overlay"></div>
+			<div class="hero-content text-neutral-content text-left backdrop-blur-sm rounded-box z-1 p-3 bg-black/20">
+				<div class=" max-w-md font-mono">
+					<p class="mb-4">Hi, I'm</p>
+				<h1 class="mb-8 text-5xl font-bold">Samuel Brizzi</h1>
+				<p class="mb-4 font-mono">
+					<b>Self.taught()</b> Developer<br> 
+					PhD in DIY shenanigans.<br>
+					I write python, but not only that.
+					<br><br>
+					
+				</p>
+				<button class="cursor-pointer">
+					<a href="#myhero">
+					<div class="flex size-10 animate-bounce items-center justify-center rounded-full p-2 ring-1 ring-white/20 hover:shadow-md hover:ring-2 hover:ring-white/50 transition-all duration-300 ease-in-out">
+						<svg class="size-6 text-white/70" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+					</div>
+					</a>
+				</button>
+				</div>
+			</div>
+			</div>
+		  <div id="myhero" class="hero min-h-screen pt-10">
+			<div  class="hero-content text-center">
+			  <div class="max-w-md">
+				<h3 class="text-2xl font-bold">I'm a geek all-around: <br>STEMs, Coding, Arts and more...</h3>
+				<p class="py-4 text-md text-left">
+					Passionate of any physics, astronomy and chemistry topic, I love to learn and solve problems.<br>
+					<br>
+					I've followed half of an electronic school, which became a robotics one after i got into the program in the first year.<br>
+					Participating in the 2010 World ROBOCUP at Singapore and various international competition over the years.<br>
+					<br>
+					After that i've opened a project studio in Alessandria, with my dear friend Giacomo (aka Coffeeshop) we produced some now multi-million stream artists.
+					<br>
+					Alongside I've been producing and performing with a local crew named SDP, producing 2 full-length albums, plus more singles and making a some of the artworks and videos.
+					<br><br>
+					I've acquired skills in many fields, from soldering of SMD components to Industrial Equipment and PLC Automation, from PCB Design and Engineering to Software Development, from digital signals to physical actuation.
+					<br><br>
+					
+				</p>
+				<a href="#projects"><button class="btn btn-ghost btn-primary border-1 border-white/20">My Projects</button></a>
+			  </div>
+			</div>
+		  </div>
+		  <h1 class="text-2xl font-bold text-left ml-4">My Github Repos:</h1>
+		  <div id="projects" class="flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pr-4 pt-4  border-t mt-2 border-white/20 ml-4">
+			<div class="card border-1 col-span-1 border-white/20  shadow-sm shadow-cyan-500/50 bg-gradient-to-tr from-cyan-500/30 via-transparent to-indigo-500/20 hover:from-cyan-500/10 hover:to-indigo-500/30 hover:shadow-md cursor-pointer transition duration-300 ease-in-out">
+					<a href="https://github.com/moddroid94/spotify-desk-thing">
+						<div class="card-body text-left place-content-between">
+							<h2 class="mb-2 card-title text-left">Spotify Desk Thing</h2>
+							<p class="mb-4">Mini Spotify remote player app made for a rpi based desk touch display/controller/thing</p>
+							<div class="card-actions place-content-center">
+							  <button class="btn btn-primary btn-ghost border-1 border-white/20"><a href="https://github.com/moddroid94/spotify-desk-thing">Open on Github</a></button>
+							</div>
+						  </div>
+					</a>
+
+			  </div>
+			  
+			  <div class="card border-1 col-span-1 border-white/20 shadow-sm shadow-cyan-500/50 bg-gradient-to-tr from-cyan-500/30 via-transparent to-indigo-500/20 hover:from-cyan-500/10 hover:to-indigo-500/30 hover:shadow-md cursor-pointer transition duration-300 ease-in-out">
+				<a>
+					<div class="card-body text-left place-content-between">
+						<h2 class="mb-2 card-title">OpenLoop</h2>
+						<p class="mb-4">WIP Dockerized Web Sound library manager (a la' Splice)<br>
+						Built with Django and and NextJs, batteries included.</p>
+						<div class="card-actions place-content-center">
+						  <button class="btn btn-primary btn-ghost border-1 border-white/20"><a href="https://github.com/moddroid94/openloop">Open On Github</a></button>
+						</div>
+					  </div>
+				</a>
+			  </div>
+
+			  <div class="card card-side border-1 col-span-1 md:col-span-2 lg:col-span-1 border-white/20 shadow-sm shadow-cyan-500/50 bg-gradient-to-tr from-cyan-500/30 via-transparent to-indigo-500/20 hover:from-cyan-500/10 hover:to-indigo-500/30 hover:shadow-md cursor-pointer transition duration-300 ease-in-out">
+				<a>
+					<figure class="rounded-full ml-4 mr-2 mt-6 w-24 ring-1 ring-white/20">
+						<img class="object-fill h-full"
+						  src="https://avatars.githubusercontent.com/u/16489982?v=4"
+						  alt="Profile" />
+					  </figure>
+					<div class="card-body text-left ">
+						<h2 class="card-title">0x4B1D</h2>
+						<p class="mb-2">@moddroid94</p>
+						<div class="card-actions place-content-end">
+						  <button class="btn btn-primary btn-ghost border-1 border-white/20"><a href="https://github.com/moddroid94">Open On Github</a></button>
+						</div>
+					  </div>
+				</a>
+			  </div>
+		  </div>
+		  <div class="flex w-full flex-col">
+			<div class="divider"></div>
+		  </div>
+
+		  <footer class="footer sm:footer-horizontal text-neutral-content p-10 mt-10">
+			<aside>
+			  <a class="text-4xl font-bold font-mono">0x4B1D</a>
+			  <p>
+				Samuel Brizzi
+				<br />
+				Providing reliable tech since 1994
+			  </p>
+			</aside>
+			<nav>
+			  <h6 class="footer-title ">SocialS</h6>
+			  <div class="grid grid-flow-col gap-4">
+				<a href="" class="cursor-pointer">
+				  <svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					class="fill-current">
+					<path
+					  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+				  </svg>
+				</a>
+				<a href="" class="cursor-pointer">
+				  <svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					class="fill-current">
+					<path
+					  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+				  </svg>
+				</a>
+				<a href="" class="cursor-pointer">
+				  <svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					class="fill-current">
+					<path
+					  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+				  </svg>
+				</a>
+			  </div>
+			</nav>
+		  </footer>
+	</body>
+</html>
